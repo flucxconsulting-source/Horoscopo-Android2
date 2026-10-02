@@ -4,6 +4,9 @@
     <string name="detail_title">Horoscope detail</string>
     <string name="action_grid">Grid view</string>
     <string name="action_list">List view</string>
+    <string name="action_open_filters">Open filters</string>
+    <string name="action_done">Done</string>
+    <string name="action_clear">Clear</string>
     <string name="action_favourite">Favourite</string>
     <string name="action_remove_favourite">Remove favourite</string>
     <string name="action_mark_favourite">Mark favourite</string>
@@ -13,6 +16,15 @@
     <string name="label_element">Element</string>
     <string name="label_planet">Planet</string>
     <string name="label_color">Color</string>
+    <string name="filters_title">Filters</string>
+    <string name="filter_favourite">Favourite</string>
+    <string name="filter_dob">Date of birth</string>
+    <string name="filter_dob_placeholder">MM-DD</string>
+    <string name="filter_element">Element</string>
+    <string name="filter_planet">Planet</string>
+    <string name="filter_color">Color</string>
+    <string name="filter_sign">Sign</string>
+    <string name="filter_all">All</string>
     <string name="fact_inline">%1$s: %2$s</string>
     <string name="fact_stacked">%1$s\n%2$s</string>
     <string name="empty_horoscopes">No horoscope signs available.</string>
