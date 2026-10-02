@@ -7,15 +7,19 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.lifecycle.lifecycleScope
 import com.flucx.horoscopoandroid2.R
 import com.flucx.horoscopoandroid2.data.FavouriteStore
 import com.flucx.horoscopoandroid2.data.HoroscopePeriod
 import com.flucx.horoscopoandroid2.data.HoroscopeRepository
 import com.flucx.horoscopoandroid2.data.HoroscopeSign
+import com.flucx.horoscopoandroid2.data.remote.RemoteForecastRepository
 import com.google.android.material.button.MaterialButtonToggleGroup
+import kotlinx.coroutines.launch
 
 class DetailActivity : AppCompatActivity() {
     private lateinit var favouriteStore: FavouriteStore
+    private lateinit var forecastRepository: RemoteForecastRepository
     private lateinit var sign: HoroscopeSign
     private lateinit var favoriteImageButton: ImageButton
     private lateinit var readingTextView: TextView
@@ -37,6 +41,7 @@ class DetailActivity : AppCompatActivity() {
         }
 
         favouriteStore = FavouriteStore(this)
+        forecastRepository = RemoteForecastRepository.create()
         favoriteImageButton = findViewById(R.id.favoriteImageButton)
         readingTextView = findViewById(R.id.readingTextView)
 
@@ -108,7 +113,20 @@ class DetailActivity : AppCompatActivity() {
     }
 
     private fun renderReading(period: HoroscopePeriod) {
-        readingTextView.text = when (period) {
+        readingTextView.text = fallbackReading(period)
+        lifecycleScope.launch {
+            val remoteReading = runCatching {
+                forecastRepository.getForecast(sign, period)
+            }.getOrNull()
+
+            if (!remoteReading.isNullOrBlank()) {
+                readingTextView.text = remoteReading
+            }
+        }
+    }
+
+    private fun fallbackReading(period: HoroscopePeriod): String {
+        return when (period) {
             HoroscopePeriod.Today -> getString(sign.summaryRes)
             HoroscopePeriod.Week -> getString(
                 R.string.reading_week,

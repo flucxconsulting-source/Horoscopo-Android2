@@ -12,6 +12,7 @@ This project intentionally follows the older Android View system so it can be co
 - Detail screen for each sign.
 - Favourite heart with one favourite sign at a time.
 - Day, week, and month reading toggle.
+- DivineAPI day, week, and month forecasts when credentials are configured.
 - Light and dark mode through Material DayNight theme.
 
 ## Project Structure
@@ -21,6 +22,23 @@ This project intentionally follows the older Android View system so it can be co
 - `res/layout/`: XML screens and card layouts.
 - `res/drawable/`: vector icons.
 - `res/menu/`: toolbar actions.
+
+## Remote Forecasts
+
+The detail screen can load updated forecasts from DivineAPI:
+
+- `https://astroapi-5.divineapi.com/api/v5/daily-horoscope`
+- `https://astroapi-5.divineapi.com/api/v5/weekly-horoscope`
+- `https://astroapi-5.divineapi.com/api/v5/monthly-horoscope`
+
+Add credentials to your user-level Gradle properties file, not to this repository:
+
+```properties
+DIVINE_API_KEY=your-api-key
+DIVINE_AUTH_TOKEN=your-auth-token
+```
+
+When credentials are missing or a request fails, the app continues showing the local fallback reading.
 
 ## Open In Android Studio
 

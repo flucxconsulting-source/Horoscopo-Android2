@@ -11,4 +11,7 @@ data class HoroscopeSign(
     @param:StringRes val planetRes: Int,
     @param:StringRes val colorRes: Int,
     @param:StringRes val summaryRes: Int,
-)
+) {
+    val englishName: String
+        get() = id.replaceFirstChar { it.uppercase() }
+}
