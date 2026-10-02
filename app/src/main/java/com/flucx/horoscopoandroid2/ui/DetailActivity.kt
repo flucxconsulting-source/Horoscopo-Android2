@@ -59,9 +59,21 @@ class DetailActivity : AppCompatActivity() {
         findViewById<TextView>(R.id.nameTextView).setText(sign.nameRes)
         findViewById<TextView>(R.id.datesTextView).setText(sign.datesRes)
         findViewById<TextView>(R.id.summaryTextView).setText(sign.summaryRes)
-        findViewById<TextView>(R.id.elementTextView).text = getString(R.string.label_element) + "\n" + getString(sign.elementRes)
-        findViewById<TextView>(R.id.planetTextView).text = getString(R.string.label_planet) + "\n" + getString(sign.planetRes)
-        findViewById<TextView>(R.id.colorTextView).text = getString(R.string.label_color) + "\n" + getString(sign.colorRes)
+        findViewById<TextView>(R.id.elementTextView).text = getString(
+            R.string.fact_stacked,
+            getString(R.string.label_element),
+            getString(sign.elementRes),
+        )
+        findViewById<TextView>(R.id.planetTextView).text = getString(
+            R.string.fact_stacked,
+            getString(R.string.label_planet),
+            getString(sign.planetRes),
+        )
+        findViewById<TextView>(R.id.colorTextView).text = getString(
+            R.string.fact_stacked,
+            getString(R.string.label_color),
+            getString(sign.colorRes),
+        )
         renderReading(HoroscopePeriod.Today)
     }
 
@@ -98,8 +110,16 @@ class DetailActivity : AppCompatActivity() {
     private fun renderReading(period: HoroscopePeriod) {
         readingTextView.text = when (period) {
             HoroscopePeriod.Today -> getString(sign.summaryRes)
-            HoroscopePeriod.Week -> getString(sign.summaryRes) + "\n\n" + getString(sign.elementRes) + " energy supports steady progress this week."
-            HoroscopePeriod.Month -> getString(sign.planetRes) + " sets the tone this month. Keep " + getString(sign.colorRes).lowercase() + " close as your reminder."
+            HoroscopePeriod.Week -> getString(
+                R.string.reading_week,
+                getString(sign.summaryRes),
+                getString(sign.elementRes),
+            )
+            HoroscopePeriod.Month -> getString(
+                R.string.reading_month,
+                getString(sign.planetRes),
+                getString(sign.colorRes).lowercase(),
+            )
         }
     }
 

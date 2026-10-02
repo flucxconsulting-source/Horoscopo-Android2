@@ -13,7 +13,11 @@
     <string name="label_element">Element</string>
     <string name="label_planet">Planet</string>
     <string name="label_color">Color</string>
+    <string name="fact_inline">%1$s: %2$s</string>
+    <string name="fact_stacked">%1$s\n%2$s</string>
     <string name="empty_horoscopes">No horoscope signs available.</string>
+    <string name="reading_week">%1$s\n\n%2$s energy supports steady progress this week.</string>
+    <string name="reading_month">%1$s sets the tone this month. Keep %2$s close as your reminder.</string>
 
     <string name="aries_name">Aries</string>
     <string name="taurus_name">Taurus</string>

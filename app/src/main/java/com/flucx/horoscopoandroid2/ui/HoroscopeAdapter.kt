@@ -29,8 +29,16 @@ class HoroscopeAdapter(
     override fun getItemCount(): Int = signs.size
 
     fun updateFavourite(favouriteSignId: String?) {
+        val previousFavouritePosition = signs.indexOfFirst { it.id == this.favouriteSignId }
+        val nextFavouritePosition = signs.indexOfFirst { it.id == favouriteSignId }
         this.favouriteSignId = favouriteSignId
-        notifyDataSetChanged()
+
+        if (previousFavouritePosition != RecyclerView.NO_POSITION) {
+            notifyItemChanged(previousFavouritePosition)
+        }
+        if (nextFavouritePosition != RecyclerView.NO_POSITION && nextFavouritePosition != previousFavouritePosition) {
+            notifyItemChanged(nextFavouritePosition)
+        }
     }
 
     inner class HoroscopeViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -45,7 +53,11 @@ class HoroscopeAdapter(
             symbolTextView.text = sign.symbol
             nameTextView.setText(sign.nameRes)
             datesTextView.setText(sign.datesRes)
-            elementTextView.text = context.getString(R.string.label_element) + ": " + context.getString(sign.elementRes)
+            elementTextView.text = context.getString(
+                R.string.fact_inline,
+                context.getString(R.string.label_element),
+                context.getString(sign.elementRes),
+            )
             favoriteImageButton.setImageResource(
                 if (isFavourite) R.drawable.ic_favorite_selected else R.drawable.ic_favorite,
             )
