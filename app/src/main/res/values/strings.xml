@@ -1,0 +1,85 @@
+<resources>
+    <string name="app_name">Horoscope Android 2</string>
+    <string name="home_title">Horoscope</string>
+    <string name="detail_title">Horoscope detail</string>
+    <string name="action_grid">Grid view</string>
+    <string name="action_list">List view</string>
+    <string name="action_favourite">Favourite</string>
+    <string name="action_remove_favourite">Remove favourite</string>
+    <string name="action_mark_favourite">Mark favourite</string>
+    <string name="period_today">Today</string>
+    <string name="period_week">Week</string>
+    <string name="period_month">Month</string>
+    <string name="label_element">Element</string>
+    <string name="label_planet">Planet</string>
+    <string name="label_color">Color</string>
+    <string name="empty_horoscopes">No horoscope signs available.</string>
+
+    <string name="aries_name">Aries</string>
+    <string name="taurus_name">Taurus</string>
+    <string name="gemini_name">Gemini</string>
+    <string name="cancer_name">Cancer</string>
+    <string name="leo_name">Leo</string>
+    <string name="virgo_name">Virgo</string>
+    <string name="libra_name">Libra</string>
+    <string name="scorpio_name">Scorpio</string>
+    <string name="sagittarius_name">Sagittarius</string>
+    <string name="capricorn_name">Capricorn</string>
+    <string name="aquarius_name">Aquarius</string>
+    <string name="pisces_name">Pisces</string>
+
+    <string name="aries_dates">Mar 21 - Apr 19</string>
+    <string name="taurus_dates">Apr 20 - May 20</string>
+    <string name="gemini_dates">May 21 - Jun 20</string>
+    <string name="cancer_dates">Jun 21 - Jul 22</string>
+    <string name="leo_dates">Jul 23 - Aug 22</string>
+    <string name="virgo_dates">Aug 23 - Sep 22</string>
+    <string name="libra_dates">Sep 23 - Oct 22</string>
+    <string name="scorpio_dates">Oct 23 - Nov 21</string>
+    <string name="sagittarius_dates">Nov 22 - Dec 21</string>
+    <string name="capricorn_dates">Dec 22 - Jan 19</string>
+    <string name="aquarius_dates">Jan 20 - Feb 18</string>
+    <string name="pisces_dates">Feb 19 - Mar 20</string>
+
+    <string name="element_fire">Fire</string>
+    <string name="element_earth">Earth</string>
+    <string name="element_air">Air</string>
+    <string name="element_water">Water</string>
+
+    <string name="planet_mars">Mars</string>
+    <string name="planet_venus">Venus</string>
+    <string name="planet_mercury">Mercury</string>
+    <string name="planet_moon">Moon</string>
+    <string name="planet_sun">Sun</string>
+    <string name="planet_pluto">Pluto</string>
+    <string name="planet_jupiter">Jupiter</string>
+    <string name="planet_saturn">Saturn</string>
+    <string name="planet_uranus">Uranus</string>
+    <string name="planet_neptune">Neptune</string>
+
+    <string name="color_crimson">Crimson</string>
+    <string name="color_green">Forest green</string>
+    <string name="color_yellow">Yellow</string>
+    <string name="color_silver">Silver</string>
+    <string name="color_gold">Gold</string>
+    <string name="color_olive">Olive</string>
+    <string name="color_rose">Rose</string>
+    <string name="color_burgundy">Burgundy</string>
+    <string name="color_purple">Purple</string>
+    <string name="color_charcoal">Charcoal</string>
+    <string name="color_blue">Electric blue</string>
+    <string name="color_seafoam">Seafoam</string>
+
+    <string name="summary_aries">Lead boldly today, but choose your first step with care.</string>
+    <string name="summary_taurus">Protect your rhythm and trust practical progress.</string>
+    <string name="summary_gemini">A useful conversation can open a new door.</string>
+    <string name="summary_cancer">Your instincts are strong, especially around people.</string>
+    <string name="summary_leo">Share what you are proud of and let confidence include others.</string>
+    <string name="summary_virgo">One fixed detail can make the whole day feel lighter.</string>
+    <string name="summary_libra">A fair choice still deserves a clear voice.</string>
+    <string name="summary_scorpio">Look beneath the obvious answer before deciding.</string>
+    <string name="summary_sagittarius">Give yourself a bigger horizon, even through a small step.</string>
+    <string name="summary_capricorn">Consistency is your advantage today.</string>
+    <string name="summary_aquarius">Test your fresh idea with real-world constraints.</string>
+    <string name="summary_pisces">Give your imagination a simple container.</string>
+</resources>
